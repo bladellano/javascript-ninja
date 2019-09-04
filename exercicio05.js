@@ -17,22 +17,22 @@ function calculator( operator ){
 		var result;
 		switch( operator ){
 			case '+':
-		 result = number1 + number2;
-		 break;
+			result = number1 + number2;
+			break;
 			case '-':
-		 result = number1 - number2;
+			result = number1 - number2;
 			case '*':
-		 result = number1 * number2;
-		 break;
+			result = number1 * number2;
+			break;
 			case '/':
-		 result = number1 / number2;
-		 break;
+			result = number1 / number2;
+			break;
 			case '%':
-		 result = number1 % number2;
-		 break;
-		 
-		 default:
-	         return 'Operação inválida.';
+			result = number1 % number2;
+			break;
+			
+			default:
+			return 'Operação inválida.';
 
 		}
 		return 'Resultado da operação: '+number1+' '+operator+' '+number2+' = '+result+'.';
@@ -43,11 +43,11 @@ var sum = calculator('+');
 
 console.log(sum(7,8));
 
-var substraction = calculator('-');
+var substraction   = calculator('-');
 var multiplication = calculator('*');
-var division = calculator('/');
-var mod = calculator('%');
-var qualquercoisa = calculator('x');
+var division       = calculator('/');
+var mod            = calculator('%');
+var qualquercoisa  = calculator('x');
 
 console.log( substraction(5,2) )
 console.log( multiplication(20,8) )
