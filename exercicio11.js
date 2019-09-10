@@ -32,4 +32,12 @@ console.log( subtract(10,2) );
 console.log( subtract('JS', 2) );
 console.log( subtract({}, []) );
 
-function 
+function subtract_(num1,num2){
+	if( num1===null ){
+		return 'Não entre com valores nulos!';
+	}
+	return num1 - num2;
+}
+
+ 
+console.log("subtract_()", subtract_(null,10));
