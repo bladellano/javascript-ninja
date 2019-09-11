@@ -39,7 +39,31 @@ function moreThan( age ){
 
 console.log('The person has more than 25 yeras old?', moreThan(25));
 
+console.log('De 0 a 10:');
+
+var numbers = [];
+
+for(var i = 0; i < 20; i++){
+
+	if(i > 10){
+		break;
+	}
+	numbers.push( i );
+}
+console.log(numbers);
 
 
+console.log('Impares:');
+
+numbers = [];
+
+for(var i = 0; i <= 20; i++){
+
+	if(i % 2 === 0){
+		continue;
+	}
+	numbers.push(i);
+}
+console.log(numbers);
 
 })();//Fim
