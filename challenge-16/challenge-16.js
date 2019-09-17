@@ -22,7 +22,7 @@
 	console.log( fullName );
 	// console.log( newFullName.join(' ') );
 	console.log( newFullName );
- 
+
 	console.log('\nMeus amigos:');
 
 	var friends = ['Paulo','Marcos','Caio','Diego', 'Felipe'];
@@ -31,5 +31,31 @@
 		var separator = friends.length - 1 === index ? ' e ': ', ';
 		return ac + separator + cur;
 	}).concat( ' são meus amigos.');
+
 	console.log( phrase );
+
+	console.log('\nEra "Roberto", agora é: ');
+
+	console.log( 'Roberto'.replace('to','ta') );
+
+	console.log('\nParte de uma string:');
+
+	console.log( 'Fernando'.slice('Fernando'.lastIndexOf('nando') ) );
+
+	console.log( 'Fernando'.substring( 3 )  );
+
+	console.log('\nNome com letras intercaladas entre caixa alta e baixa:');
+
+	var myName = 'Fernando';
+
+	var arrMyName = myName.split('');
+
+	var newArray = arrMyName.map(function(item,index){
+		return index % 2 === 0 
+		? item.toUpperCase() 
+		: item.toLocaleLowerCase(); 
+	});
+
+console.log( newArray.join( '' ));
+// 
 })();
