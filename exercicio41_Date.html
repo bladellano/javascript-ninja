@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Date</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<h2>Trabalhando com Datas</h2>
+	<script>
+		(function(){
+
+			'use strict';
+
+			var months = [
+			'Janeiro',
+			'Fevereiro',
+			'Março',
+			'Abril',
+			'Maio',
+			'Junho',
+			'Julho',
+			'Agosto',
+			'Setembro',
+			'Outubro',
+			'Novembro',
+			'Dezembro'
+			];
+
+			var year = 2015;
+			var month = 10;
+			var day = 7;
+			var hour = 10;
+			var min = 10;
+			var sec = 10;
+			var milliseconds = 10;
+
+			var date = new Date(year,month,day,hour,min,sec,milliseconds);
+			// var date = new Date();
+
+			console.log(Date.now());//numero de milisegundos desde 1970 até agora.
+			console.log(Date.now() / 1000)//segundos
+			console.log(Date.now() / 1000 / 60)//minutos
+			console.log(Date.now() / 1000 / 60 / 60)//horas
+			console.log(Date.now() / 1000 / 60 / 60 / 24)//dias
+			console.log(Date.now() / 1000 / 60 / 60 / 24 / 365)//anos
+			console.log(months[month]);
+
+			date.getDate(); // 0-31;
+			date.getDay();// 0-6;
+			date.getFullYear();//2019
+			date.getYear();//119;
+			date.getHours();//0-23
+			console.log("date.getDay()", date.getDate());
+			console.log("date.getDay()", date.getDay());
+			console.log("date.getDay()", date.getYear());
+			console.log("date.getMilliseconds()", date.getMilliseconds());
+			console.log("date.getMonth()", date.getMonth());
+
+		})();
+	</script>
+</body>
+</html>
