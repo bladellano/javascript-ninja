@@ -3,7 +3,12 @@
 	'use strict';
 
 	function DOM(elements) {
+		if(!(this instanceof DOM))
+			return new DOM(elements);
+
 		this.element = document.querySelectorAll(elements);
+		// if(this.element.length === 1)
+			// return this.get();
 	}
 
 	//Métodos estáticos
@@ -50,8 +55,10 @@
 		});
 	};
 
-	DOM.prototype.get = function get() {
-		return this.element;
+	DOM.prototype.get = function get(index) {
+		if(!index)
+			return this.element[0];
+		return this.element[index];
 	};
 
 	DOM.prototype.forEach = function forEach(){
@@ -81,8 +88,6 @@
 	DOM.prototype.some = function some(){
 		return Array.prototype.some.apply(this.element, arguments);
 	};
-
-	
 
 	win.DOM = DOM;//Criando um propriedade DOM com objeto DOM.
 
